@@ -18,11 +18,11 @@ jobs:
       matrix:
         python-version: ["3.9", "3.13"]
     runs-on: ubuntu-latest
+    # official Python images: old versions stay available after the runner
+    # images drop them (e.g. 3.9 is not offered for Ubuntu 26.04)
+    container: python:${{ matrix.python-version }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
       - run: pip install numpy scipy pandas openpyxl matplotlib pillow pytest
       - run: python -m pytest -q tests
 
