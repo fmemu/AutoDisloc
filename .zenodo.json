@@ -1,0 +1,32 @@
+{
+  "title": "AutoDisloc: dislocation density of hcp titanium alloys (Ti-6Al-4V, CP-Ti) from X-ray line profile analysis (mWH, mWA and Wilkens whole-profile fitting)",
+  "upload_type": "software",
+  "version": "2.0.0",
+  "license": "mit",
+  "creators": [
+    {
+      "name": "Memu, Fırat",
+      "orcid": "0000-0002-3485-7040",
+      "affiliation": "TOBB University of Economics and Technology"
+    }
+  ],
+  "description": "<p>AutoDisloc computes the dislocation density, the Burgers-vector population and the dislocation arrangement parameter of hcp &alpha;/&alpha;&prime; titanium alloys (e.g. Ti-6Al-4V, CP-Ti) from laboratory X-ray diffraction patterns of different diffractometers (Bruker RAW/UXD, PANalytical XRDML, two-column text; any X-ray tube; line standards corundum, LaB<sub>6</sub>, Si, CeO<sub>2</sub> or other). The main result comes from fitting the Wilkens dislocation model, a log-normal size distribution and the Dragomir&ndash;Ung&aacute;r hexagonal contrast factors directly to the measured profiles (CMWP-type whole-profile analysis). The modified Williamson&ndash;Hall (mWH) analysis gives the Burgers-vector population; a Voigt-based modified Warren&ndash;Averbach (mWA) analysis is reported for comparison. Desktop program for macOS and Windows (Turkish/English), command-line interface, publication-ready figures and tables, and a whitepaper describing the mathematics in detail.</p>",
+  "keywords": [
+    "X-ray diffraction",
+    "line profile analysis",
+    "dislocation density",
+    "modified Williamson-Hall",
+    "modified Warren-Averbach",
+    "Wilkens model",
+    "contrast factor",
+    "Ti-6Al-4V",
+    "titanium alloys",
+    "additive manufacturing"
+  ],
+  "references": [
+    "Memu, F. (2025). Eklemeli imalat yöntemi ile üretilmiş Ti-6Al-4V alaşımının yüksek gerinme hızlarındaki davranışının deneysel ve sayısal yöntemler ile incelenmesi (PhD thesis). TOBB University of Economics and Technology, Ankara."
+  ],
+  "notes": "The calculation method is based on the dislocation-density measurement method of the author's PhD thesis. The Python implementation, the graphical user interface, the reports, the packaging and the documentation were developed with the assistance of the AI model Claude Opus 5.5 (Anthropic) under the author's direction and review.",
+  "language": "eng",
+  "access_right": "open"
+}

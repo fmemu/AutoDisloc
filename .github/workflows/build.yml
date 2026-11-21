@@ -1,0 +1,77 @@
+# Tests on every push; on a published release, builds the desktop program for
+# Windows and macOS with PyInstaller and attaches to the release: the zip files
+# (with LICENSE and the third-party notices) and the source archives of the
+# packaged Qt / PySide6 version (LGPLv3).
+name: build
+
+on:
+  push:
+  pull_request:
+  release:
+    types: [published]
+
+jobs:
+  test:
+    # oldest supported (pyproject requires-python) and newest Python version
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.13"]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install numpy scipy pandas openpyxl matplotlib pillow pytest
+      - run: python -m pytest -q tests
+
+  package:
+    if: github.event_name == 'release'
+    needs: test
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r packaging/requirements-build.txt
+      - run: python packaging/make_icon.py
+      - run: python -m PyInstaller --noconfirm --clean --distpath dist --workpath build packaging/AutoDisloc2.spec
+      - name: Stage notices
+        shell: bash
+        run: |
+          mkdir -p stage
+          cp LICENSE stage/LICENSE.txt
+          cp build/third_party/THIRD-PARTY-NOTICES.txt build/third_party/QT-SOURCE.txt stage/
+      - name: Zip (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          Copy-Item -Recurse dist/AutoDisloc2 stage/AutoDisloc2
+          Compress-Archive -Path stage/* -DestinationPath AutoDisloc2_Windows.zip
+      - name: Zip (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          cp -R dist/AutoDisloc2.app stage/
+          ditto -c -k --norsrc --noextattr stage AutoDisloc2_macOS.zip
+      - name: Attach to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: gh release upload "${{ github.event.release.tag_name }}" AutoDisloc2_*.zip --clobber
+      - name: Attach Qt / PySide6 source (LGPLv3)
+        if: runner.os == 'macOS'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p qtsrc
+          while read -r url; do
+            [ -n "$url" ] && curl -fsSL -o "qtsrc/$(basename "$url")" "$url"
+          done < build/third_party/QT-SOURCE-URLS.txt
+          gh release upload "${{ github.event.release.tag_name }}" qtsrc/* --clobber

@@ -1,0 +1,19 @@
+# build products (release binaries are attached to GitHub releases, not committed)
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+packaging/venv/
+# private data and notes (unpublished thesis data)
+local/
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+docs/whitepaper/_cache_*.pkl
+assets/icon.iconset/
+docs/manual/_screens_results.pkl
