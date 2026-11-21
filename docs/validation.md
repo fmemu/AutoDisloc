@@ -1,6 +1,6 @@
 # Validation: reproduction of published numbers
 
-Every item is repeated by an automated test in `tests/` (`python -m pytest tests`). Turkish version: [validation.tr.md](validation.tr.md).
+Every item is repeated by an automated test in `tests/` (`python -m pytest tests`).
 
 ## 1. Burgers-vector population (h fractions) and b²C̄
 

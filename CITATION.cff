@@ -8,7 +8,7 @@ authors:
     orcid: "https://orcid.org/0000-0002-3485-7040"
     affiliation: "TOBB University of Economics and Technology"
 version: 2.0.0
-date-released: 2026-11-07                               # TODO: set to the day of the GitHub release
+date-released: 2026-11-22
 license: MIT
 repository-code: "https://github.com/fmemu/AutoDisloc"
 # doi: "10.5281/zenodo.xxxxxxx"                             # TODO: concept DOI after the first Zenodo release

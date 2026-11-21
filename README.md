@@ -2,7 +2,7 @@
 
 **Dislocation density of hcp α/α′ titanium alloys (Ti-6Al-4V, CP-Ti, …) from X-ray line profile analysis**
 
-[Türkçe](README.tr.md) · [User manual (PDF)](docs/manual/AutoDisloc2_Manual_EN.pdf) · [Whitepaper (PDF)](docs/whitepaper/AutoDisloc2_Whitepaper_EN.pdf) · [Validation](docs/validation.md) · License: MIT
+[User manual (PDF)](docs/manual/AutoDisloc2_Manual_EN.pdf) · [Whitepaper (PDF)](docs/whitepaper/AutoDisloc2_Whitepaper_EN.pdf) · [Validation](docs/validation.md) · License: MIT
 
 AutoDisloc computes the dislocation density ρ, the Burgers-vector population (fractions of ⟨a⟩, ⟨c⟩ and ⟨c+a⟩ dislocations) and the Wilkens arrangement parameter M* from laboratory X-ray diffraction patterns. It combines three established line-profile methods:
 
@@ -19,7 +19,7 @@ The mathematics is derived step by step in the [whitepaper](docs/whitepaper/Auto
 
 The [user manual](docs/manual/AutoDisloc2_Manual_EN.pdf) explains installation, every window element and all outputs step by step, with screenshots. It is also opened with the *User manual* button of the program.
 
-The interface is in Turkish and English (switch with the **TR | EN** buttons in the toolbar).
+The interface is in English and Turkish (switch with the **TR | EN** buttons in the toolbar). The user manual and the whitepaper are also available in Turkish: [manual (TR)](docs/manual/AutoDisloc2_Manual_TR.pdf), [whitepaper (TR)](docs/whitepaper/AutoDisloc2_Whitepaper_TR.pdf).
 
 | | macOS | Windows |
 |---|---|---|
@@ -84,7 +84,7 @@ AutoDisloc is released under the [MIT License](LICENSE). The ready-made applicat
 
 ## Development
 
-The calculation method of AutoDisloc is based on the dislocation-density measurement method of the author's doctoral thesis (TOBB University of Economics and Technology, 2025). The Python implementation, the graphical user interface, the reports, the packaging and the documentation were developed with the assistance of Claude Opus 5.5 (Anthropic) under the author's direction and review.
+The calculation method of AutoDisloc is based on the dislocation-density measurement method of the author's doctoral thesis (TOBB University of Economics and Technology, 2025), supervised by Prof. Dr. Nuri Durlu. The Python implementation, the graphical user interface, the reports, the packaging and the documentation were developed with the assistance of Claude Opus 5.5 (Anthropic) under the author's direction and review.
 
 ## Citation
 

@@ -809,7 +809,7 @@ def build(lang):
       "DOI'si). Yöntem whitepaper'da anlatılmıştır. Geliştiren: " + AUTHOR + ".")
     P("<b>Scientific basis and development.</b> The calculation method of AutoDisloc (modified Williamson–Hall, "
       "modified Warren–Averbach and Burgers-vector population analysis) is based on the dislocation-density "
-      "measurement method of the author's doctoral thesis: F. Memu, <i>Eklemeli imalat yöntemi ile üretilmiş Ti-6Al-4V alaşımının yüksek gerinme hızlarındaki davranışının deneysel ve sayısal yöntemler ile incelenmesi</i> (Experimental and numerical investigation of the high-strain-rate behaviour of Ti-6Al-4V produced by additive manufacturing), PhD thesis, TOBB University of Economics and Technology, Graduate School of Natural and Applied Sciences, Department of Mechanical Engineering, Ankara, 2025. The conversion "
+      "measurement method of the author's doctoral thesis: F. Memu, <i>Eklemeli imalat yöntemi ile üretilmiş Ti-6Al-4V alaşımının yüksek gerinme hızlarındaki davranışının deneysel ve sayısal yöntemler ile incelenmesi</i> (Experimental and numerical investigation of the high-strain-rate behaviour of Ti-6Al-4V produced by additive manufacturing), PhD thesis, TOBB University of Economics and Technology, Graduate School of Natural and Applied Sciences, Department of Mechanical Engineering, Ankara, 2025 (supervisor: Prof. Dr. Nuri Durlu). The conversion "
       "and extension of this method into Python code (including the Wilkens whole-profile fit), the graphical user "
       "interface (GUI), the reports and exports, the packaging, the tests and the documentation (this manual and the "
       "whitepaper) were developed with the assistance of the AI model Claude Opus 5.5 (Anthropic) under the "
@@ -817,7 +817,7 @@ def build(lang):
       "them rest with the author.",
       "<b>Bilimsel temel ve geliştirme.</b> AutoDisloc'un hesaplama yöntemi (modifiye Williamson–Hall, modifiye "
       "Warren–Averbach ve Burgers vektörü popülasyonu analizi), yazarın doktora tezindeki dislokasyon yoğunluğu "
-      "ölçüm yöntemine dayanır: F. Memu, <i>Eklemeli imalat yöntemi ile üretilmiş Ti-6Al-4V alaşımının yüksek gerinme hızlarındaki davranışının deneysel ve sayısal yöntemler ile incelenmesi</i>, Doktora Tezi, TOBB Ekonomi ve Teknoloji Üniversitesi, Fen Bilimleri Enstitüsü, Makina Mühendisliği Anabilim Dalı, Ankara, 2025. Bu yöntemin Python koduna dönüştürülmesi ve "
+      "ölçüm yöntemine dayanır: F. Memu, <i>Eklemeli imalat yöntemi ile üretilmiş Ti-6Al-4V alaşımının yüksek gerinme hızlarındaki davranışının deneysel ve sayısal yöntemler ile incelenmesi</i>, Doktora Tezi, TOBB Ekonomi ve Teknoloji Üniversitesi, Fen Bilimleri Enstitüsü, Makina Mühendisliği Anabilim Dalı, Ankara, 2025 (danışman: Prof. Dr. Nuri Durlu). Bu yöntemin Python koduna dönüştürülmesi ve "
       "genişletilmesi (Wilkens tam profil uydurması dahil), grafik kullanıcı arayüzü (GUI), raporlar ve dışa "
       "aktarma, paketleme, testler ve belgeler (bu kılavuz ve whitepaper), yazarın yönlendirmesi ve denetiminde "
       "Anthropic'in Claude Opus 5.5 yapay zekâ modelinin yardımıyla geliştirilmiştir. Sonuçların bilimsel "

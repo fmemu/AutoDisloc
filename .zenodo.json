@@ -10,6 +10,14 @@
       "affiliation": "TOBB University of Economics and Technology"
     }
   ],
+  "contributors": [
+    {
+      "name": "Durlu, Nuri",
+      "type": "Supervisor",
+      "orcid": "0000-0001-8416-4974",
+      "affiliation": "TOBB University of Economics and Technology"
+    }
+  ],
   "description": "<p>AutoDisloc computes the dislocation density, the Burgers-vector population and the dislocation arrangement parameter of hcp &alpha;/&alpha;&prime; titanium alloys (e.g. Ti-6Al-4V, CP-Ti) from laboratory X-ray diffraction patterns of different diffractometers (Bruker RAW/UXD, PANalytical XRDML, two-column text; any X-ray tube; line standards corundum, LaB<sub>6</sub>, Si, CeO<sub>2</sub> or other). The main result comes from fitting the Wilkens dislocation model, a log-normal size distribution and the Dragomir&ndash;Ung&aacute;r hexagonal contrast factors directly to the measured profiles (CMWP-type whole-profile analysis). The modified Williamson&ndash;Hall (mWH) analysis gives the Burgers-vector population; a Voigt-based modified Warren&ndash;Averbach (mWA) analysis is reported for comparison. Desktop program for macOS and Windows (Turkish/English), command-line interface, publication-ready figures and tables, and a whitepaper describing the mathematics in detail.</p>",
   "keywords": [
     "X-ray diffraction",

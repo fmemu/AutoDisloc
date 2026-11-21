@@ -1,4 +1,4 @@
-# Examples / Örnekler
+# Examples
 
 | File | Content |
 |---|---|
@@ -23,12 +23,3 @@ declare it in header lines, which you can also add to your own `.xy` / `.txt` / 
 ```bash
 python -m autodisloc --lang en analyze examples/synthetic_Ti64_A.xy examples/synthetic_Ti64_B.xy -c autodisloc/data/instrument_corundum_example.json -o report.xlsx
 ```
-
----
-
-Gerçek parametreler her dosyanın başlığında yazılıdır; bu desenler whitepaper'ın uygulamalı örnekleridir. A: ρ = 1,0×10¹⁵ m⁻²; B: ρ = 1,0×10¹¹ m⁻² (algılama sınırının altında).
-
-Düz iki sütunlu dosyalarda ölçüm bilgisi bulunmaz; AutoDisloc bu durumda Cu Kα varsayar. Örnek dosyalar bu
-bilgiyi başlık satırlarında verir; aynı satırları kendi `.xy` / `.txt` / `.csv` dosyalarınıza ekleyebilirsiniz
-(`# WL1 = 1.540598`, `# WL2 = 1.544426`, `# WLRATIO = 0.5` (0 = Kα2 ayıklanmış), `# RADIUS = 250` (mm) veya
-`# ANODE = Cu`).
